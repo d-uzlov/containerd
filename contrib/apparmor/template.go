@@ -118,6 +118,7 @@ func loadData(name string) (*data, error) {
 		Name: name,
 	}
 
+	p.Imports = append(p.Imports, "abi <abi/3.0>,")
 	if macroExists("tunables/global") {
 		p.Imports = append(p.Imports, "#include <tunables/global>")
 	} else {
